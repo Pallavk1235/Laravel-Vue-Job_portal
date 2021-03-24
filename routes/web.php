@@ -21,6 +21,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::resource('jobs', 'JobController');
+Route::resource('permission', 'PermissionController');
+Route:: resource('role', 'RoleController');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::get('/jobs','JobController@index')->name('jobs.index');
+Route::get('/jobs','JobController@list')->name('jobs.job-list');
+Route::post('/jobs','JobController@Postjob')->name('job.Postjob');
+
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
