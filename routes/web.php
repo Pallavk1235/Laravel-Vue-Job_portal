@@ -36,3 +36,8 @@ Route::post('/jobs','JobController@Postjob')->name('job.Postjob');
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+///////////////////////////////////////////// axios request
+Route::get('/getAllPermission', 'PermissionController@getAllPermissions');
+
